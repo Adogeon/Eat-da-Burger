@@ -1,0 +1,18 @@
+<li>
+	
+    {{#unless eaten}}
+	    <button class="change-eat" data-id="{{id}}"> 
+            Eat
+	    </button>
+    {{/unless}}
+    <span 
+        {{#unless eaten}}
+        class = "text-black"
+        {{else}}
+        class = "text-muted"
+        {{/unless}}
+    >
+        {{burger_name}}
+    </span>
+    
+</li>

@@ -3,11 +3,11 @@ var burger = require("../models/burger.js");
 
 var router = express.Router();
 
-router.get("/api/all", function(req,res) {
+router.get("/", function(req,res) {
     burger.getAllBurgers(function(results) {
-        res.json(results);
+        res.render("home",{burgers:results});
     })
-})
+});
 
 router.get("/api/eat/:id", function(req,res) {
     var idToEat = req.params.id;
