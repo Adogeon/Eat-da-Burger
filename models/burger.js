@@ -8,7 +8,7 @@ var burgers = {
         orm.insertOne("burger","burger_name",nameOfBurger,cb);
     },
     eatThis: function(id,cb) {
-        orm.updateOne("burgers","devoured","TRUE","id",id,cb);
+        orm.updateOne("burgers","devoured",true,"id",id,cb);
     }
 }
 
