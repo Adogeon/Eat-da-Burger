@@ -21,7 +21,7 @@ router.get("/api/eat/:id", function(req,res) {
 })
 
 router.post("/api/add", function(req,res) {
-    var newBurger = req.body;
+    var newBurger = req.body.burger;
     burger.addBurger(newBurger, function(results) {
         res.status(200).end();
     })

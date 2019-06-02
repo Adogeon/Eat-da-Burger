@@ -5,7 +5,7 @@ var burgers = {
         orm.selectAll("burgers",cb);
     },
     addBurger: function(nameOfBurger,cb) {
-        orm.insertOne("burger","burger_name",nameOfBurger,cb);
+        orm.insertOne("burgers","burger_name",nameOfBurger,cb);
     },
     eatThis: function(id,cb) {
         orm.updateOne("burgers","devoured",true,"id",id,cb);
